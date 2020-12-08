@@ -1,0 +1,133 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-08-25T22:50:47.624Z",
+        "line": 3,
+        "name": "number of character id and house",
+        "description": "",
+        "id": "verify-number-of-character-id-and-house;number-of-character-id-and-house",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 634160700,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "set URI",
+            "match": {
+              "location": "SortingHats.set_URI()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2289625400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "send get request with key and \"character\" endPoints",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"character\"",
+                  "offset": 30
+                }
+              ],
+              "location": "badKey.send_get_request_with_key_and_endPoints(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2717100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Verify status code is 200 and contentType is \"application/json; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 22
+                },
+                {
+                  "val": "\"application/json; charset\u003dutf-8\"",
+                  "offset": 45
+                }
+              ],
+              "location": "badKey.verify_status_code_is_and_contentType_is(Integer,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 586303700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Verify all characters in the response have \"_id\" field which is not empty",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"_id\"",
+                  "offset": 43
+                }
+              ],
+              "location": "CharactersIdAndHouse.verify_all_characters_in_the_response_have_field_which_is_not_empty(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 122873800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Verify that value type of the field dumbledoresArmy is a boolean in all characters in the response",
+            "match": {
+              "location": "CharactersIdAndHouse.verify_that_value_type_of_the_field_dumbledoresArmy_is_a_boolean_in_all_characters_in_the_response()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128922000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Verify value of the house in all characters in the response is one of the following",
+            "match": {
+              "location": "CharactersIdAndHouse.verify_value_of_the_house_in_all_characters_in_the_response_is_one_of_the_following(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "\"Gryffindor\"",
+                  "\"Ravenclaw\"",
+                  "\"Slytherin\"",
+                  "\"Hufflepuff\""
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@conid"
+          }
+        ]
+      }
+    ],
+    "name": "Verify number of character id and house",
+    "description": "",
+    "id": "verify-number-of-character-id-and-house",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/charactersIDandHouse.feature",
+    "tags": []
+  }
+]
